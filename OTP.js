@@ -1,34 +1,31 @@
-function sendOTP() {
-    const email = document.getElementById('email');
-    const otpverify = document.getElementsByClassName('otpverify')[0];
-    
-    let otp_val = Math.floor(Math.random() * 10000);
-    
-    let emailbody = '<h2>Your OTP is </h2>${otp_val}';
-    Email.send({
-        SecureToken : "69df46ed-cdce-4dae-bd47-fd901d928370",
-        To : email.value,
-        From : "youssefjan010@gmail.com",
-        Subject : "OTP using JavaScript",
-        Body : emailbody,
-    }).then(
-
-      message => {
-        if (message ==="OK"){
-            alert("OTP sent to your email " + email.value);
-
-            otpverify.style.display = "flex";
-            const otp_inp = document.getElementById('otp_inp');
-            const otp_btn = document.getElementById('otp-btn');
-
-            otp_btn.addEventListener('click', () => {
-                if (otp_inp.value == otp_val) {
-                    alert("Email address verified");
-                } else {
-                    alert("Invalid OTP");
-                }
-            })
-        }
-      }
-    );
-}
+function generateOTP(length) {
+    let otp = '';
+    const digits = '0123456789';
+  
+    for (let i = 0; i < length; i++) {
+      otp += digits[Math.floor(Math.random() * 10)];
+    }
+  
+    return otp;
+  }
+  
+  function sendOTP(otp) {
+    console.log("Your OTP is: " + otp);
+  }
+  
+  function validateOTP(inputOTP, generatedOTP) {
+    return inputOTP === generatedOTP;
+  }
+  
+  const otpLength = 6; 
+  const generatedOTP = generateOTP(otpLength);
+  
+  sendOTP(generatedOTP);
+  
+  const userInput = prompt("Enter the OTP sent to your device:");
+  
+  if (validateOTP(userInput, generatedOTP)) {
+    console.log("OTP validated successfully. Access granted!");
+  } else {
+    console.log("Invalid OTP. Access denied.");
+  }
