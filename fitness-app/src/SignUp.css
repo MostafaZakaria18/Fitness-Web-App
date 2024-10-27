@@ -105,6 +105,18 @@ nav {
 .signup-container button:hover{
   background-color: #fc5e5e;
 }
+   @media (max-width: 768px) {
+                     nav ul { 
+                        flex-direction: column; 
+                        display: none; 
+                    } 
+
+                    nav ul li { margin: 0; } 
+
+                         nav ul.active {  display: flex; } 
+
+                         .menu-toggle { display: block; } 
+                        }
 @media (max-width: 600px) {
   .signup-container {
     margin: 50px 10px;
