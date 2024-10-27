@@ -8,13 +8,6 @@ const [formData, setFormData] = useState({
     password: '',
     confirmPassword: ''
 });
-    document.addEventListener('DOMContentLoaded', function () {
-     const menuToggle = document.querySelector('.menu-toggle');
-      const nav = document.querySelector('nav ul'); 
-      menuToggle.addEventListener('click', function () {
-         nav.classList.toggle('active');
-         });
-         });
 
 const [responseMessage , setResponseMessage] = useState("");
 const handleChange = (e) => {
