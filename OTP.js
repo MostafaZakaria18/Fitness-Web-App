@@ -1,8 +1,12 @@
 const readline = require('readline');
+const sgMail = require('@sendgrid/mail');
+
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
+
+sgMail.setApiKey('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');
 
 function generateOTP(length) {
   let otp = '';
@@ -13,8 +17,20 @@ function generateOTP(length) {
   return otp;
 }
 
-function sendOTP(otp) {
-  console.log("Your OTP is: " + otp);
+async function sendOTPEmail(email, otp) {
+  const msg = {
+    to: email,
+    from: 'youssef.16jan@gmail.com', 
+    subject: 'Your OTP Code',
+    text: `Your OTP is: ${otp}`
+  };
+
+  try {
+    await sgMail.send(msg);
+    console.log(`OTP sent to ${email}`);
+  } catch (error) {
+    console.error('Error sending email:', error.response ? error.response.body : error);
+  }
 }
 
 function validateOTP(inputOTP, generatedOTP) {
@@ -23,8 +39,9 @@ function validateOTP(inputOTP, generatedOTP) {
 
 const otpLength = 6;
 const generatedOTP = generateOTP(otpLength);
+const userEmail = 'youssefjan010@gmail.com'; 
 
-sendOTP(generatedOTP);
+sendOTPEmail(userEmail, generatedOTP);
 
 rl.question("Enter the OTP sent to your device: ", (userInput) => {
   if (validateOTP(userInput.trim(), generatedOTP)) {
