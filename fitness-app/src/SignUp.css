@@ -36,7 +36,7 @@
   transition: background-color 0.3s ease;
 }
 .signup-container button:hover{
-  background-color: #fc5e5e;
+  background-color: #181136;
 }
 .home-icon {
   position: absolute;
@@ -52,6 +52,18 @@
 .home-icon:hover {
   color: #a2301c6c;
 }
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.success {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
 
 @media (max-width: 600px) {
   .signup-container {

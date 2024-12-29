@@ -3,8 +3,10 @@
   margin: 50px auto;
   padding: 20px;
   border-radius: 10px;
+  border: 1px solid #ddd;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   background-color: #0f0101;
+  margin-top: 150px;
 }
 
 h2 {
@@ -34,7 +36,7 @@ input {
 }
 
 button:hover{
-  background-color: #fc5e5e;
+  background-color: #181136 ;
 }
 
 .error {

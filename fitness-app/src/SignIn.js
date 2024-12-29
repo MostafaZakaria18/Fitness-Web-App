@@ -1,5 +1,6 @@
     import React ,{useState}from "react";
     import './SignIn.css';
+    import { validateOTP, generateOTP, sendOTPEmail} from "./OTP";
     //import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
     //import { faHome } from '@fortawesome/free-solid-svg-icons';
 
@@ -11,8 +12,16 @@
     
         const handleSubmit = (e) => {
             e.preventDefault();
-    
-            const user = JSON.parse(localStorage.getItem('user'));
+            setError("");
+            
+            var user = JSON.parse(localStorage.getItem('user'));
+            user = {
+                email:"ms@test.com",
+                password: "123"
+            }
+            console.log("user --->", user)
+
+
     
             if (!user) {
                 setError('No user found. Please register.');
@@ -22,13 +31,18 @@
                 setError('Incorrect password.');
             } else {
                 localStorage.setItem('token', 'dummy-token'); 
-               // navigate('/'); 
+                localStorage.setItem('email', user.email);
+                setEmail('');
+                setPassword('');
+                
+                window.location.href="/";
             }
+           
         };
     
         return (
             <div className="signin-container">
-                <h2>Sign In</h2>
+                <h2>Please enter your information to sign In</h2>
                 <form onSubmit={handleSubmit}>
                     <input
                         type="email"
