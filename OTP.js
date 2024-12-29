@@ -6,7 +6,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-sgMail.setApiKey('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');
+sgMail.setApiKey('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');
 
 function generateOTP(length) {
   let otp = '';
