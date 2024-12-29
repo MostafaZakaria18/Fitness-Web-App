@@ -1,7 +1,10 @@
 import React ,{useState}from "react";
 import './SignUp.css';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
-const SignUp = () => {
+
+const SignUp = () => {  
 const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -47,14 +50,25 @@ const handleChange = (e) => {
   setResponseMessage("Network error: &{error.message}");
   }   
 };
+const goToLandingPage = () => {
+  window.location.href="normal_redirect.html"
+};
   return (
+    <div>
    <div className="signup-container">
+  
    <form onSubmit={handleSubmit}>
       <div> 
         <header>
-          <h1> Please enter your information to sign up</h1>
+        {/* <FontAwesomeIcon
+        icon={faHome}
+        className="home-icon"
+        onClick={goToLandingPage}
+        />       */}
+            <h1> Please enter your information to sign up</h1>
         </header>
       </div>
+      
       <div>
         <label>
           Name:
@@ -108,6 +122,7 @@ const handleChange = (e) => {
       </div>
     </form>
     {responseMessage && <p>{responseMessage}</p>}
+    </div>
     </div>
   );
 };

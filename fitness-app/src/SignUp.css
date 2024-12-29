@@ -1,3 +1,4 @@
+
 .signup-container{
   max-width: 400px;
   margin: 100px auto;
@@ -8,9 +9,10 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .signup-container input{
-  width: 100%;
+  width: 94%;
   padding: 10px;
   margin-bottom: 15px;
+  /* margin-right: 100px; */
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 16px;
@@ -36,6 +38,21 @@
 .signup-container button:hover{
   background-color: #fc5e5e;
 }
+.home-icon {
+  position: absolute;
+  cursor: pointer;
+  color: #f7f7f7;
+  top: 15%;
+  transition: color 0.3s;
+}
+
+.fa-house{
+  font-size: 30px;
+}
+.home-icon:hover {
+  color: #a2301c6c;
+}
+
 @media (max-width: 600px) {
   .signup-container {
     margin: 50px 10px;

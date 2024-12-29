@@ -10,6 +10,13 @@ root.render(
     <App />
   </React.StrictMode>
 );
+// document.addEventListener('DOMContentLoaded', function () {
+//      const menuToggle = document.querySelector('.menu-toggle');
+//       const nav = document.querySelector('nav ul'); 
+//       menuToggle.addEventListener('click', function () {
+//          nav.classList.toggle('active');
+//          });
+//          });
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
