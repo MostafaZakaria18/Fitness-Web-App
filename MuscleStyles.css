@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+    margin: 0;
+    padding: 0;
+}
+
+.muscle-menu {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #888;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.search-bar:focus {
+    border-color: #444;
+    outline: none;
+}
+
+.muscle-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.muscle-item {
+    background: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.muscle-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.muscle-item img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.muscle-item img:hover {
+    transform: scale(1.05);
+}
+
+.muscle-detail {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.muscle-detail h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.muscle-detail img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.exercise-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.exercise-item {
+    text-align: center;
+    width: calc(33.333% - 20px);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.exercise-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.exercise-item img {
+    width: 100%;
+    border-bottom: 2px solid #ddd;
+}
+
+h3 {
+    color: #555; 
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666; 
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.success {
+    color: green;
+    text-align: center;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+ 
+.not-found {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px; 
+}

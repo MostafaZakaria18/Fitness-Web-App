@@ -6,9 +6,7 @@ import legsImage from './images/legs.jpg';
 import armsImage from './images/arms.jpg';
 import shouldersImage from './images/shoulders.jpg';
 import placeholderImage from './images/placeholder.jpg';
-
-// Importing exercise images
-import chestPushUpsImage from './images/chest_push_ups.jpg';
+import chestPushUpsImage from './images/chest-Push-Ups.jpg';
 import chestBenchPressImage from './images/chest_bench_press.jpg';
 import chestFlyImage from './images/chest_fly.jpg';
 import backPullUpsImage from './images/back_pull_ups.jpg';
@@ -24,7 +22,8 @@ import shouldersPressImage from './images/shoulders_press.jpg';
 import shouldersLateralImage from './images/shoulders_lateral.jpg';
 import shouldersFrontImage from './images/shoulders_front.jpg';
 
-// Muscle data containing exercise images
+
+
 const muscleData = {
     chest: {
         name: 'Chest',
@@ -110,7 +109,7 @@ const MuscleDetail = () => {
             <div className="exercise-images">
                 {muscle.pictures.map((picture) => (
                     <div key={picture.src} className="exercise-item">
-                        <img 
+                        <image
                             src={picture.src} 
                             alt={`${picture.description} image`} 
                             onError={(e) => { 
@@ -125,6 +124,6 @@ const MuscleDetail = () => {
             </div>
         </div>
     );
-};
+}    
 
 export default MuscleDetail;
