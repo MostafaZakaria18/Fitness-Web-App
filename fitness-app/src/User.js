@@ -17,6 +17,9 @@ useEffect(() =>{
         throw new Error('failed to fetch user data: ${response.statusText}');
       }
       const data = await response.json();
+      var mydate = new Date(data[0].birthDate).toISOString().split('T')[0];
+      console.log(mydate);
+      data[0].birthDate = mydate;
       setUser(data[0]);
       setLoading(false);
     } catch(err){
@@ -57,7 +60,7 @@ return(
     <p><strong>Name:</strong> {user.name}</p>
     <p><strong>Email:</strong> {user.email}</p>
     <p><strong>Phone:</strong> {user.phone}</p>
-    {/* <p><strong>Birth Date:</strong> {user.birthDate || "Not Provided"}</p> */}
+    <p><strong>Birth Date:</strong> {user.birthDate || "Not Provided"}</p>
   </div>
   <div className="profile-actions">
     <button className="edit-button" onClick={handleEditClick}>Edit</button>
