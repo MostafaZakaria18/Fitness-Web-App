@@ -11,16 +11,16 @@ const NaviBar = () => {
                     <div class="logo">Tadreba</div>
                     <ul class="nav-links">
                         <li><a href="/">Home</a></li>
-                        <li><a href="MuscleMenu">Programs</a></li>
-                        <li><a href = "Recipes">Recipes</a></li>
+                        <li><a href="/programs">Programs</a></li>
+                        <li><a href = "/Recipes">Recipes</a></li>
                         <li class="dropdown">
-                            <a href="#">Register</a>
+                            <a href="/#">Register</a>
                             <div class="dropdown-content">
-                                <a href="signup">Sign Up</a>
-                                <a href="signin">Sign In</a>
+                                <a href="/signup">Sign Up</a>
+                                <a href="/signin">Sign In</a>
                             </div>
                         </li>
-                        {userEmail && <li><a href="User">User Profile</a></li>}
+                        {userEmail && <li><a href="/User">User Profile</a></li>}
                     </ul>
                             <div class="menu-toggle">&#9776;</div> 
                         </nav> 

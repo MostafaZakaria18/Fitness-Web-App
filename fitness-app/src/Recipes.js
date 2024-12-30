@@ -64,24 +64,6 @@ const Recipes = () => {
     }
     return <div className="error">Error:{error}</div>;
   }
-  // return(
-  //     <div className="recipes-container">
-  //         <h1>Healthy Recipes</h1>
-  //         <div className="recipes-grid">
-  //             {recipes.map((recipe)=>(
-  //                 <div key={recipe.id} className="recipe-card" onClick={}>
-  //                     <img
-  //                         src= {recipe.image ||""}
-  //                         alt={recipe.title}
-  //                         className="recipe-image"
-  //                     />
-  //                     <h3>{recipe.name}</h3>
-  //                     {/* <p>recipe.description</p> */}
-  //                 </div>
-  //             ))}
-  //         </div>
-  //     </div>
-  // );
   return (
     <div className="recipes-list-container">
       {console.log(selectedRecipe)}

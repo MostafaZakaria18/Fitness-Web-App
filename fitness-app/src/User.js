@@ -17,6 +17,7 @@ useEffect(() =>{
         throw new Error('failed to fetch user data: ${response.statusText}');
       }
       const data = await response.json();
+      console.log(data);
       var mydate = new Date(data[0].birthDate).toISOString().split('T')[0];
       console.log(mydate);
       data[0].birthDate = mydate;
