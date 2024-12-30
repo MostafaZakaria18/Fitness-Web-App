@@ -1,0 +1,105 @@
+
+.edit-page {
+    width: 100%;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .edit-page h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .edit-page form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .edit-page label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  
+  .edit-page input {
+    padding: 12px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+  }
+  
+  .edit-page input:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  .edit-page button {
+    padding: 12px;
+    background-color: #001ba2;
+    margin-right: 50px;
+    width: 250px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .edit-page button:hover {
+    background-color: #181136;
+  }
+  
+  .edit-page .error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .edit-page .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .edit-page .form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .edit-page .form-group input:focus {
+    border-color: #000e00;
+  }
+  
+  .edit-page .form-group label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  
+  .edit-page .cancel-button {
+    padding: 12px;
+    background-color: #a62805;
+    
+    width: 250px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .edit-page .cancel-button:hover {
+    background-color: #181136;
+  }
+  
