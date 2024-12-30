@@ -26,8 +26,8 @@ return(
     <Route path="/User" element={<User />} />
     <Route path ="/Recipes" element={<Recipes/>}/>
     <Route path="/edit" element={<EditPage />} />
-    {/* <Route path="/" element={<MuscleMenu />} />
-    <Route path="/muscle/:muscleName" element={<MuscleDetail />} /> */}
+    <Route path="/programs" element={<MuscleMenu />} />
+    <Route path="/programs/:muscleName" element={<MuscleDetail />} />
   </Routes>
   </Router>
 );
